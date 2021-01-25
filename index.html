@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matter APP</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/overrides.css">
+    <script src="https://kit.fontawesome.com/b72dd1e481.js" crossorigin="anonymous"></script>
+</head>
+<script src="./assets/js/middlewares/authenticated.js"></script>
+<body> 
+    <div class="container mt-5 mb-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="card card-matter mb-5">
+                    <div class="card-body">
+                        <h2 class="mb-3" id="greeting">¡Hola!</h4>
+                        <form action="/" id="invitation-form">
+                            <div class="form-group">
+                                <label for="email">Invita a tus amigos a evaluar tus skills</label>
+                                <input type="email" class="form-control" id="email" placeholder="Email" required>
+                              </div>
+                              <button type="submit" class="btn btn-primary rounded-pill btn-block">Enviar invitación</button>
+                        </form>
+                    </div>
+                </div>
+                <h3 class="mt-5">Feedback recibido</h3>
+                <div id="feedback-container">
+
+                </div>
+            </div>
+            <button type="button" class="button-menu btn btn-primary" id="button-menu" onclick="hide()">
+                <i class="fas fa-user-circle"></i>
+            </button>
+            <div class="col-lg-4"> 
+                <div class="card-menu" id="menu">
+                    <div class="card-body">
+                        <ul class="list-unstyled m-0">
+                            <li>
+                                <a href="/"><i class="fas fa-home"></i> Pantalla principal</i></a>
+                            </li>
+                            <li>
+                                <a href="/profile.html"><i class="fas fa-user"></i> Actualizar nombre</i></a>
+                            </li>
+                            <li>
+                                <a href="/evaluate-skills.html"><i class="fas fa-layer-group"></i> Evaluar skills</a>
+                            </li>
+                            <li>
+                                <a href="./auth/login.html" onclick="signOut()"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function signOut(){
+            localStorage.setItem('user', '');
+            localStorage.setItem('authenticated', 'false');
+        }
+        function hide(){
+            document.getElementById('menu').classList.toggle('left');
+            document.getElementById('button-menu').classList.toggle('left');
+        }
+    </script>
+    <script type="module" src="./assets/js/main.js"></script>
+</body>
+</html>
+
+

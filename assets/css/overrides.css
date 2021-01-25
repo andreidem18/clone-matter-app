@@ -1,0 +1,10 @@
+/* In this file we override some bootstrap styles */
+[class*='-info'] {
+    background-color: var(--bg-info);
+    border-color: var(--bg-info);
+    color: var(--color-info);
+}
+.alert-warning {
+    background-color: var(--bg-warning);
+    border-color: var(--bg-warning);
+}

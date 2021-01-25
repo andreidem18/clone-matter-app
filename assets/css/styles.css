@@ -1,0 +1,15 @@
+:root {
+    --primary-blue-light: #e1e8f6;
+    --primary-blue-dark: #022163;
+    --bg-info: #e1e8f6;
+    --color-info: #022163;
+    --bg-warning: #fff3e0;
+    --bg-danger: #fce4ec;
+    --bg-success: #e4faf6;
+}
+body {
+    background-color: #f7fbff;
+}
+a:hover{
+    text-decoration: none;
+}
